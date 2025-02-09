@@ -3,317 +3,329 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khair Muhammad's Resume</title>
+    <title>Khair Muhammad - Backend Developer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --text-color: #4a4a4a;
+        }
 
-    <!-- Google font  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&display=swap"
-        rel="stylesheet">
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-color);
+            line-height: 1.7;
+        }
 
-    <!-- font-awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        .navbar {
+            background-color: var(--primary-color) !important;
+            transition: all 0.3s ease;
+        }
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+        .navbar.scrolled {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #e9ecef, #f8f9fa);
+            padding: 6rem 0;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        .hero-section h2 {
+            color: var(--secondary-color);
+            margin-bottom: 2rem;
+        }
+
+        .hero-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 1.5rem;
+            object-fit: cover;
+            border: 4px solid var(--secondary-color);
+        }
+
+        .btn-custom {
+            border-radius: 50px;
+            padding: 0.8rem 1.5rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            margin-bottom: 2.5rem;
+            font-weight: 600;
+            font-size: 1.8rem;
+            text-align: center;
+        }
+
+        .skill-badge {
+            background-color: var(--secondary-color);
+            color: white;
+            margin: 0.3rem;
+            padding: 0.5rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .experience-card,
+        .project-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background-color: #fff;
+            border: none;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .experience-card:hover,
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-body h5 {
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .navbar-nav .nav-link {
+            font-weight: 500;
+            padding: 0.75rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: var(--secondary-color);
+        }
+    </style>
 </head>
 
 <body>
-    <main class="resume-contents">
-        <section class="left-section">
-            <div class="left-section-contents">
-                <div class="profile">
-                    <img class="profile-image" src="img/my_image.png" alt="Profile image">
-                    <p class="name">Khair Muhammad</p>
-                    <p class="profession">Software Developer</p>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Khair Muhammad</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#summary">Summary</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <img src="img/my_image.png" alt="Khair Muhammad" class="hero-image">
+            <h1>Khair Muhammad</h1>
+            <h2>Backend Developer</h2>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="mailto:khairmuhammad2048@gmail.com" class="btn btn-outline-secondary btn-custom">
+                    <i class="fas fa-envelope"></i> Email
+                </a>
+                <a href="https://linkedin.com/in/khair-muhammad" target="_blank" class="btn btn-outline-secondary btn-custom">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Summary Section -->
+    <section id="summary" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Summary</h2>
+            <p>Backend developer with over 3 years of experience delivering impactful, scalable software solutions across diverse projects. Strong expertise in Java, Spring Boot, C#, .NET Core, JavaScript, React, Azure, and AWS Cloud services. Proven success in Test Driven Development (TDD) and Agile methodologies, optimizing processes, reducing deployment times, and consistently achieving client satisfaction.</p>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Key Skills</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Backend</h4>
+                    <span class="badge skill-badge">Java</span>
+                    <span class="badge skill-badge">Spring Boot</span>
+                    <span class="badge skill-badge">C#</span>
+                    <span class="badge skill-badge">.NET Core</span>
+                    <span class="badge skill-badge">Python</span>
+                    <span class="badge skill-badge">Flask</span>
                 </div>
-                <div class="contact-info">
-                    <p class="left-title">Contact Info</p>
-                    <ul>
-                        <li><i class="fa fa-phone"></i>+92 306 3229252
-                        </li>
-                        <li><i class="fa fa-envelope"></i><a href="mailto:khairmuhammad2048@gmail.com" target="_blank"
-                                style="color: #d6dbdfaf; text-decoration: none;">khairmuhammad2048@gmail.com</a>
-                        </li>
-                        <li><i class="fa fa-linkedin"></i><a href="https://linkedin.com/in/khair-muhammad"
-                                target="_blank"
-                                style="color: #d6dbdfaf; text-decoration: none;">https://linkedin.com/in/khair-muhammad</a>
-                        </li>
-                        <li><i class="fa fa-github"></i><a href="https://github.com/khairmuhammad" target="_blank"
-                                style="color: #d6dbdfaf; text-decoration: none;">https://github.com/khairmuhammad</a>
-                        </li>
-                        <li><i class="fa fa-map-marker"></i>Karachi, Sindh, Pakistan
-                        </li>
-                    </ul>
+                <div class="col-md-6">
+                    <h4>Frontend</h4>
+                    <span class="badge skill-badge">JavaScript</span>
+                    <span class="badge skill-badge">React JS</span>
+                    <span class="badge skill-badge">TypeScript</span>
+                    <span class="badge skill-badge">Tailwind</span>
+                    <span class="badge skill-badge">Bootstrap</span>
+                    <span class="badge skill-badge">HTML</span>
+                    <span class="badge skill-badge">CSS</span>
                 </div>
-                <div class="skills">
-                    <p class="left-title">Skills</p>
-                    <ul>
-                        <li>
-                            <p>Backend: Java, Spring Boot, C#, Dot Net Core</p>
-                        </li>
-                        <li>
-                            <p>Frontend: ES6+ React JS, TypeScript, Tailwind, Bootstrap5, HTML5, CSS3</p>
-                        </li>
-                        <li>
-                            <p>Databases: MariaDB, PostgreSQL, MySQL, MongoDB, SQL Server, SQLite</p>
-                        </li>
-                        <li>
-                            <p>DevOps & Cloud: AWS (S3, Lambda, DynamoDB), Azure, Docker, Kubernetes, Jenkins, Git</p>
-                        </li>
-                        <li>
-                            <p>Other Skills: Agile Development, Problem-Solving, Team Collaboration, Quick Learning</p>
-                        </li>
-                    </ul>
+                <div class="col-md-6 mt-4">
+                    <h4>Databases</h4>
+                    <span class="badge skill-badge">MariaDB</span>
+                    <span class="badge skill-badge">PostgreSQL</span>
+                    <span class="badge skill-badge">MySQL</span>
+                    <span class="badge skill-badge">MSSQL Server</span>
+                    <span class="badge skill-badge">MongoDB</span>
+                    
+                </div>
+                <div class="col-md-6 mt-4">
+                    <h4>DevOps & Cloud</h4>
+                    <span class="badge skill-badge">AWS</span>
+                    <span class="badge skill-badge">Azure</span>
+                    <span class="badge skill-badge">Docker</span>
+                    <span class="badge skill-badge">Kubernetes</span>
+                    <span class="badge skill-badge">Jenkins</span>
+                    <span class="badge skill-badge">Git</span>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="right-section">
-            <div class="right-section-contents">
-                <section class="about gap">
-                    <div class="right-title">About Me</div>
-                    <p class="about-me-contents">
-                        Backend developer with over 3 years of experience delivering impactful, scalable software
-                        solutions across diverse projects. Strong expertise in Java, Spring Boot, C#, Dot Net Core,
-                        JavaScript, React, Azure, and AWS Cloud
-                        services. Proven success in Test Driven Development (TDD) and Agile methodologies, optimizing
-                        processes, reducing deployment times, and
-                        consistently achieving client satisfaction.
-                    </p>
-                </section>
-
-                <section class="experience gap">
-                    <div class="right-title">Experience</div>
-                    <div class="experience-contents">
-                        <div class="exp-left">
-                            <p class="exp-company-name"><a href="https://www.healthhub.kr/" target="_blank"
-                                    style="color: #21638f; text-decoration: none;">Healthhub Co., Ltd.</a></p>
-                            <p class="exp-time-period">Seoul, South Korea (Remote)</p>
-                            <p class="exp-time-period">Mar 2022 - Present</p>
-                        </div>
-                        <div class="exp-right">
-                            <p class="exp-position">Web & App Developer</p>
-                            <p class="exp-desc">
-                            <ul>
-                                <li>✓ <b>Engineer</b> and <b>maintain</b> scalable RESTful API architecture with Spring Boot,
-                                    significantly enhancing API response efficiency.</li>
-                                <br>
-                                <li>✓ <b>Integrate</b> Server-Sent Events (SSE) for real-time notifications and updates,
-                                    effectively improving user engagement.</li>
-                                <br>
-                                <li>✓ <b>Develop</b> and <b>optimize</b> backend components, including Models, Services, Controllers,
-                                    DTOs, and Repositories, to streamline
-                                    development workflows and reduce load times.
-                                </li>
-                                <br>
-                                <li>✓ <b>Collaborate</b> with cross-functional teams to <b>analyze</b> and <b>resolve</b> production and
-                                    development issues, <b>reducing</b> issue resolution time.</li>
-                                <br>
-                                <li>✓ <b>Conduct</b> comprehensive API testing using Swagger UI and Postman to <b>validate</b>
-                                    functionality and <b>ensure</b> high-quality releases.</li>
-                                <br>
-                                <li>✓ <b>Implement</b> security best practices and data protection measures to <b>safeguard</b>
-                                    sensitive information and <b>prevent</b> vulnerabilities.</li>
-                                <br>
-                                <li>✓ <b>Optimize</b> database queries and schema designs, resulting in a <b>reduction</b> in data
-                                    retrieval time and <b>increased</b> application
-                                    performance.
-                                </li>
-                                <br>
-                                <li>✓ <b>Design</b> and document API endpoints for seamless third-party integrations,
-                                    <b>facilitating</b> scalability and ease of use.
-                                </li>
-                                <br>
-                                <li>✓ <b>Monitor</b> application performance and <b>conduct</b> root cause analysis to <b>identify</b> and
-                                    <b>address</b> bottlenecks.
-                                </li>
-                                <br>
-                                <li>✓ <b>Adapt</b> quickly to evolving project requirements and <b>implement</b> new features to
-                                    <b>enhance</b> product offerings.
-                                </li>
-                                <br>
-                                <li>✓ <b>Lead</b> efforts to <b>refactor</b> legacy codebases, <b>improving</b> code maintainability and
-                                    performance.
-                                </li>
-                                <br>
-                                <li>✓ <b>Coordinate</b> deployment pipelines and <b>manage</b> continuous integration/continuous
-                                    deployment (CI/CD) workflows for smooth
-                                    releases.
-                                </li>
-                            </ul>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="experience-contents">
-                        <div class="exp-left">
-                            <p class="exp-company-name"><a href=""><a href="https://logic-unit.com/" target="_blank"
-                                        style="color: #21638f; text-decoration: none;">Logic-Unit</a></a></p>
-                            <p class="exp-time-period">Karachi, Pakistan (On-site)</p>
-                            <p class="exp-time-period">Feb 2021 - Feb 2022</p>
-                            <p class="exp-time-period"><b>Technologies Used:</b></br>
-                                <b>Mobile App Development:</b> Java, Xamarin (C#)<br>
-                                <b>Backend:</b> Dot Net Core 2.0<br>
-                                <b>Frontend:</b> JavaScript, HTML5, CSS3<br>
-                                <b>Databases:</b> MySQL, SQL Server, SQLite<br>
-                                <b>Cloud:</b> Azure & AWS Services
-                            </p>
-
-                        </div>
-                        <div class="exp-right">
-                            <p class="exp-position">Software Developer</p>
-                            <p class="exp-desc">
-                            <ul>
-                                <li>✓ <b>Enhanced</b> Android apps developed in Java and Xamarin (C#) by <b>resolving</b> key issues
-                                    and <b>adding</b> new features, <b>boosting</b> user
-                                    satisfaction by 30%.
-                                </li>
-                                <br>
-                                <li>✓ <b>Maintained</b> and <b>updated</b> backend systems in .NET Core, <b>improving</b> system uptime and
-                                    reliability by 40%.
-                                </li>
-                                <br>
-                                <li>✓ <b>Engaged</b> with clients for requirements gathering and project demonstrations,
-                                    <b>achieving</b> a 95% client satisfaction rate.
-                                </li>
-                                <br>
-                                <li>✓ <b>Delivered</b> presentations on Agile Development and Scrum methodologies, <b>improving</b>
-                                    team efficiency and project delivery
-                                    timelines.
-                                </li>
-                                <br>
-                                <li>✓ <b>Deployed</b> and <b>managed</b> Cloud Apps on AWS and Azure, <b>reducing</b> server response times
-                                    by 10%.
-                                </li>
-                                <br>
-                                <li>✓ <b>Collaborated</b> with cross-functional teams to <b>analyze</b> project challenges and
-                                    <b>implement</b> solutions, resulting in smoother workflows.
-                                </li>
-                                <br>
-                                <li>✓ <b>Developed</b> custom APIs and backend services to <b>support</b> mobile and web applications,
-                                    <b>enhancing</b> product functionality.
-                                </li>
-                                <br>
-                                <li>✓ <b>Tested</b> and <b>debugged</b> applications to <b>ensure</b> high performance and reliability across
-                                    various devices and platforms.
-                                </li>
-                                <br>
-                                <li>✓ <b>Streamlined</b> deployment workflows using CI/CD pipelines, <b>accelerating</b> release
-                                    cycles.
-                                </li>
-                                <br>
-                                <li>✓ <b>Documented</b> technical specifications and user manuals, <b>facilitating</b> easier
-                                    onboarding for new team members.
-                                </li>
-                            </ul>
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="education gap">
-                    <div class="right-title">Education</div>
-                    <div class="education-contents">
-                        <div class="education-left">
-                            <p class="education-school-name"><a href="https://iba-suk.edu.pk/" target="_blank"
-                                    style="color: #21638f; text-decoration: none;">Sukkur IBA University, Pakistan</a>
-                            </p>
-                            <p class="educationp-time-period">2016 - 2021</p>
-                        </div>
-                        <div class="education-right">
-                            <p class="education-subject">BS - Computer Science</p>
-                            <p class="education-desc">
-                                <b>Skills Learned</b><br>
-                                Object Oriented Programming (Java), Object Oriented Analysis and Design, Data
-                                Structures, Analysis & design of Algorithms, Relational
-                                Database Management System, Operating System,
-                                Computer Architecture & Assembly Language, Visual Programming, Discrete Structures,
-                                Theory of Automata, & Network Security.
-
-                            </p>
-                        </div>
-                    </div>
-                    <div class="education-contents">
-                        <div class="education-left">
-                            <p class="education-school-name">Govt College Thatta, Pakistan</p>
-                            <p class="educationp-time-period">2012 - 2014</p>
-                        </div>
-                        <div class="education-right">
-                            <p class="education-subject">Science (Pre-Engineering)</p>
-                            <p class="education-desc">
-                                Studies focused on engineering subjects such as Mathematics, Algebra, Physics and
-                                Chemistry. Learned basic concepts and applied these concepts to practical issues.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="education-contents">
-                        <div class="education-left">
-                            <p class="education-school-name">Govt High School Gujjo, Pakistan</p>
-                            <p class="educationp-time-period">2008 - 2012</p>
-                        </div>
-                        <div class="education-right">
-                            <p class="education-subject">Science</p>
-                            <p class="education-desc">
-                                Studies focused on science subjects such as Mathematics, Biology, Physics and Chemistry.
-                                Learned basic concepts and applied these concepts to practical issues.
-                            </p>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="awards gap">
-                    <div class="right-title">Certifications</div>
-                    <div class="awards-contents">
-                        <ol style="display: block; list-style-type: disc;">
-                            <li><a class="education-desc"
-                                    href="https://www.linkedin.com/learning/certificates/59067a3ed597aaa65821c11455503edf61e85fde1e3534706fb751b618d869fd"
-                                    target="_blank">Spring MVC (LinkedIn)</a></li>
-                            <li><a class="education-desc"
-                                    href="https://www.linkedin.com/learning/certificates/18374c2fc282e6d9e975d9a3e92fccf0968ebf315ff905db06f1a1539ad12d80?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_certifications_details%3BwkO0s3z1QBS5rvNO9%2BvX9Q%3D%3D"
-                                    target="_blank">Spring with GraphQL (LinkedIn)</a></li>
-                            <li><a class="education-desc" href="https://www.hackerrank.com/certificates/ad8bcb1405f8"
-                                    target="_blank">Java Basics (Hackerrank)</a></li>
-                            <li><a class="education-desc"
-                                    href="https://www.datacamp.com/statement-of-accomplishment/course/97cfe26aa4a97b9d379c1b9e6dcb7bd1d2a120d5"
-                                    target="_blank">Introduction to Git (DataCamp)</a></li>
-                            <li><a class="education-desc"
-                                    href="https://www.linkedin.com/learning/certificates/f4a60dcddaccb07fbfd23991f9ddc3570bffab46a44b7ff878be837ddb5548ef?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BbO1F%2Fob%2FRhCCV%2BWyHwvmgw%3D%3D"
-                                    target="_blank">Building Real Time Web Apps with Spring Boot and WebSockets
-                                    (LinkedIn)</a></li>
-                            <li><a class="education-desc" href="____" target="_blank">Microservices with Spring Boot,
-                                    Spring Cloud, Docker, K8s (Udemy)</a></li>
-                        </ol>
-
-                    </div>
-                </section>
-
-                <section class="awards gap">
-                    <div class="right-title">Language(s)</div>
-                    <div class="awards-contents">
-                        <ul style="display: block; list-style-type: disc;">
-                            <li>✓ Sindhi (Native)</li>
-                            <li>✓ English (Full Professional Proficiency)</li>
-                            <li>✓ Norwegian (Learning)</li>
-                        </ul>
-                    </div>
-                </section>
-
-                <section class="awards gap">
-                    <div class="right-title">Hobbies</div>
-                    <div class="awards-contents">
-                        <ol style="display: block; list-style-type: disc;">
-                            <li>Playing Table Tennis</li>
-                            <li>Playing Cricket</li>
-                            <li>Watching Movies and Documentaries</li>
-                        </ol>
-                    </div>
-                </section>
+    <!-- Experience Section -->
+    <section id="experience" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="experience-card mb-4">
+                <h4>Web and App Developer</h4>
+                <h5>Healthhub Co., Ltd. <span class="text-muted">(March 2022 - Present)</span></h5>
+                <ul class="mt-3">
+                    <li>Engineered and maintained scalable RESTful API architecture with Spring Boot.</li>
+                    <li>Integrated Server-Sent Events (SSE) for real-time notifications.</li>
+                    <li>Collaborated with cross-functional teams to resolve production and development issues.</li>
+                </ul>
             </div>
-        </section>
-    </main>
+            <div class="experience-card mb-4">
+                <h4>Software Developer</h4>
+                <h5>Logic-Unit <span class="text-muted">(February 2021 - February 2022)</span></h5>
+                <ul class="mt-3">
+                    <li>Enhanced Android apps developed in Java and Xamarin (C#).</li>
+                    <li>Maintained and updated backend systems in .NET Core.</li>
+                    <li>Deployed and managed Cloud Apps on AWS and Azure.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="card">
+                <div class="card-body">
+                    <h5>Bachelor of Science in Computer Science</h5>
+                    <p>Sukkur IBA University <span class="text-muted">(August 2016 – December 2021)</span></p>
+                    <p>Courses: Object-Oriented Programming (OOP), Data Structures, Analysis of Algorithms, Data Science.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="project-card mb-4">
+                <h5>Eyes on School Going Baby</h5>
+                <p>Real-Time Facial Detection, Recognition, and Pairing System (Final Year Thesis/Project for BSCS).</p>
+                <p>
+                    <span class="badge skill-badge">Python</span>
+                    <span class="badge skill-badge">OpenCV</span>
+                    <span class="badge skill-badge">ONNX Face Detection Model</span>
+                    <span class="badge skill-badge">PySimpleGUI</span>
+                    <span class="badge skill-badge">MobileFaceNet Face Recognition Model</span>
+                    <span class="badge skill-badge">SMTP Email</span>
+                    <span class="badge skill-badge">WhatsApp API</span>
+                </p>
+                <ul class="mt-2">
+                    <li>Developed a prototype application for children's security using Python, leveraging face recognition techniques for real-time monitoring.</li>
+                    <li>Designed and implemented entry and exit monitoring systems to detect and recognize children and accompanying individuals.</li>
+                    <li>Trained deep learning face recognition models on registered images of children and their parents/guardians for accurate identification.</li>
+                    <li>Integrated email and WhatsApp notification services to instantly alert parents with images of their child and the accompanying person.</li>
+                    <li>Wrapped machine learning models into a user-friendly desktop application using PySimpleGUI for seamless interaction.</li>
+                    <li>Applied Artificial Intelligence and Deep Learning techniques to process images from standard cameras for real-time detection.</li>
+                </ul>
+            </div>
+            <div class="project-card mb-4">
+                <h5>Graduate Admission Prediction</h5>
+                <p>Machine Learning-Based Admission Prediction System.</p>
+                <p>
+                    <span class="badge skill-badge">Python</span>
+                    <span class="badge skill-badge">Linear Regression</span>
+                    <span class="badge skill-badge">Flask</span>
+                    <span class="badge skill-badge">HTML</span>
+                    <span class="badge skill-badge">CSS</span>
+                    <span class="badge skill-badge">Heroku</span>
+                </p>
+                <ul class="mt-2">
+                    <li>Trained a linear regression model in Python to predict a student’s chance of admission based on university rating, undergraduate GPA, GRE score, and research experience.</li>
+                    <li>Developed a responsive HTML web interface to collect user input and display admission prediction results.</li>
+                    <li>Deployed the trained model on Heroku for public access, providing real-time predictions (later removed due to Heroku free-tier expiration).</li>
+                    <li>Integrated the machine learning model with the web interface for a seamless user experience.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="section-title">Contact</h2>
+            <p>Email: <a href="mailto:khairmuhammad2048@gmail.com">khairmuhammad2048@gmail.com</a></p>
+            <p>Phone: <a href="tel:+923063229252">+92 3063229252</a></p>
+            <p>LinkedIn: <a href="https://linkedin.com/in/khair-muhammad" target="_blank">https://linkedin.com/in/khair-muhammad</a></p>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        window.addEventListener('scroll', function () {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
 </body>
 
 </html>
